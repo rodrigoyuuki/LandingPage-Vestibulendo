@@ -1,0 +1,191 @@
+.plano {
+    background-color: white;
+    height: 90vh;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 2cm;
+    padding-right: 2cm;
+}
+
+.plano-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: #ad2a3a;
+}
+
+.plano-title {
+    font-family: "Murecho", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    color: #ad2a3a;
+    line-height: 1.5cm;
+}
+
+.text-button {
+    margin-top: 80px;
+    width: 40%;
+}
+
+.plano-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #ad2a3a;
+}
+
+.plano-button {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: white;
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(45deg, #ff4353, #ffd294);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 15px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.plano-button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff4353, #ffd294, #ff4353, #ffd294, #ff4353, #ffd294, #ff4353, #ffd294);
+    position: absolute;
+    top: -3px;
+    left:-3px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.plano-button:active {
+    color: #000
+}
+
+.plano-button:active:after {
+    background: transparent;
+}
+
+.plano-button:hover:before {
+    opacity: 1;
+}
+
+.plano-button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff4353, #ffd294);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.wrapper {
+    background: linear-gradient(45deg, #ff4353, #ffd294);
+    padding: 4px;
+    border-radius: 15px;
+    overflow: hidden; 
+}
+
+.plano-card {
+    position: relative;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    width: 350px;
+    color: #000;
+    transition: color 0.6s ease;
+    overflow: hidden;
+}
+
+.plano-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(45deg, #ff4353, #ffd294);
+    opacity: 0;                
+    transition: opacity 0.6s ease;  
+    z-index: 0;
+}
+
+.plano-card:hover::before {
+    opacity: 1;
+}
+
+.plano-card > * {
+    position: relative;
+    z-index: 2;
+    transition: color 0.6s ease;
+}
+
+.plano-card:hover > * {
+    color: white;
+}
+
+.icon-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ad2a3a;
+}
+
+.value-text {
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    justify-content: space-between;
+    color: #ad2a3a;
+}
+
+#value {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    
+}
+
+#preco {
+    font-family: 'Murecho', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ad2a3a;
+}
+
+#plano-card-title {
+    font-family: 'Murecho', sans-serif;
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #ad2a3a;
+    font-weight: 600;
+}
+
+i{
+    margin-right: 10px;
+}
